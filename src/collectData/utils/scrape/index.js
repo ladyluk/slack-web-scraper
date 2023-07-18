@@ -14,7 +14,8 @@ async function scrapeConversations(page) {
 }
 
 async function scrapeChannels(page) {
-  const channelNames = parseNames(process.env.CHANNEL_NAMES)
+  // const channelNames = parseNames(process.env.CHANNEL_NAMES)
+  const channelNames = parseNames(process.env.GRAFANA_CHANNEL_NAMES)
   if (channelNames.length === 0) {
     console.log('No channels names found. Skipping channels scrape.')
     return
